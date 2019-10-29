@@ -127,7 +127,7 @@ run_webpack() {
   local webpack_bin_location="$1"
 
   echo "Running webpack"
-  monitor "webpack-run" "$webpack_bin_location"/bin/webpack
+  monitor "webpack-run" "$webpack_bin_location"/bin/webpack --mode production
 }
 
 should_use_npm_ci() {
