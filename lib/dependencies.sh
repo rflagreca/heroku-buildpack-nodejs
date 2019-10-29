@@ -119,6 +119,8 @@ install_webpack() {
 
   echo "Installing webpack globally"
   monitor "webpack-install" yarn global add webpack@"$webpack_version" --prefix "$bin_directory"
+  echo "Installing webpack-cli globally"
+  monitor "webpack-cli-install" yarn global add webpack-cli --prefix "$bin_directory"
 }
 
 run_webpack() {
