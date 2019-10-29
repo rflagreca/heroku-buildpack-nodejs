@@ -122,7 +122,7 @@ install_webpack() {
 
 run_webpack() {
   echo "Running webpack"
-  monitor "webpack-run" webpack
+  monitor "webpack-run" bin/webpack
 }
 
 should_use_npm_ci() {
