@@ -254,8 +254,8 @@ build_dependencies() {
     npm_node_modules "$BUILD_DIR"
   fi
 
-  install_webpack "$WEBPACK_VERSION"
-  run_webpack
+  install_webpack "$WEBPACK_VERSION" "$BUILD_DIR/.heroku/"
+  run_webpack "$BUILD_DIR/.heroku/"
 
   mtime "modules.time.cache.$cache_status" "${start}"
 

@@ -115,14 +115,17 @@ yarn_prune_devdependencies() {
 
 install_webpack() {
   local webpack_version="$1"
+  local bin_directory="$2"
 
   echo "Installing webpack globally"
-  monitor "webpack-install" yarn global add webpack@"$webpack_versio"
+  monitor "webpack-install" yarn global add webpack@"$webpack_version" --prefix "$bin_directory"
 }
 
 run_webpack() {
+  local webpack_bin_location="$1"
+
   echo "Running webpack"
-  monitor "webpack-run" bin/webpack
+  monitor "webpack-run" "$webpack_bin_location"/bin/webpack
 }
 
 should_use_npm_ci() {
