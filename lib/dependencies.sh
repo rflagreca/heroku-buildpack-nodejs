@@ -113,6 +113,18 @@ yarn_prune_devdependencies() {
   fi
 }
 
+install_webpack() {
+  local webpack_version="$1"
+
+  echo "Installing webpack globally"
+  monitor "webpack-install" yarn global add webpack@"$webpack_versio"
+}
+
+run_webpack() {
+  echo "Running webpack"
+  monitor "webpack-run" webpack
+}
+
 should_use_npm_ci() {
   local build_dir=${1:-}
   local npm_version

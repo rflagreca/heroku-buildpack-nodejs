@@ -254,6 +254,9 @@ build_dependencies() {
     npm_node_modules "$BUILD_DIR"
   fi
 
+  install_webpack "$WEBPACK_VERSION"
+  run_webpack
+
   mtime "modules.time.cache.$cache_status" "${start}"
 
   meta_set "build-step" "build-script"
