@@ -123,6 +123,11 @@ install_webpack() {
   monitor "webpack-cli-install" yarn global add webpack-cli --prefix "$bin_directory"
 }
 
+install_elm() {
+  echo "Installing elm globally"
+  monitor "elm-install" yarn global add elm --prefix "$bin_directory"
+}
+
 run_webpack() {
   local webpack_bin_location="$1"
 

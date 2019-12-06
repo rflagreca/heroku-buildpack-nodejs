@@ -255,6 +255,7 @@ build_dependencies() {
   fi
 
   install_webpack "$WEBPACK_VERSION" "$BUILD_DIR/.heroku/"
+  install_elm
   run_webpack "$BUILD_DIR/.heroku/"
 
   mtime "modules.time.cache.$cache_status" "${start}"
